@@ -1,0 +1,162 @@
+:root {
+    --primary: #27ae60;
+    --dark: #1e272e;
+    --border: #dfe6e9;
+}
+
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Layout Principal */
+.main-layout { 
+    display: flex;
+    height: 100vh;
+    background: #f4f7f6;
+}
+
+.sidebar {
+    width: 280px;
+    background: var(--dark);
+    color: white;
+    padding: 30px;
+}
+
+.brand h1 { 
+    font-size: 1.3rem;
+    margin-bottom: 40px;
+}
+
+.brand span { 
+    color: var(--primary);
+}
+
+.portfolio-section h2 { 
+    font-size: 0.7rem;
+    color: #636e72;
+    text-transform: uppercase;
+    margin-bottom: 15px; 
+}
+
+.balance-card { 
+    background: rgba(255,255,255,0.05);
+    border-radius: 4px;
+    padding: 15px;
+    font-size: 0.9rem; 
+}
+
+.market-grid {
+    flex: 1;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: min-content;
+    gap: 20px;
+}
+
+.stock-card {
+    background: white;
+    padding: 20px;
+    border: 1px solid var(--border);
+}
+
+.ticker-name { 
+    font-size: 1.1rem;
+    font-weight: 700;
+    display: block;
+}
+.comp-name { 
+    font-size: 0.8rem;
+    color: #7f8c8d;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.stock-price {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+dialog {
+    border: none;
+    border-radius: 8px;
+    padding: 0;
+    width: 350px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0; 
+}
+
+dialog::backdrop {
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.modal-content h2 { 
+    font-size: 1.2rem;
+}
+
+.modal-content input {
+    padding: 10px;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+}
+
+.error-text {
+    color: #e74c3c;
+    font-size: 0.8rem;
+    height: 1em;
+}
+
+.btn-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.btn-primary {
+    background: var(--dark);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    flex: 1; }
+
+.btn-secondary {
+    background: #eee;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    flex: 1;
+}
+.btn-buy {
+    background: var(--dark);
+    color: white;
+    border: none;
+    padding: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    flex: 1;
+}
+.btn-sell {
+    background: #eee;
+    border: none;
+    padding: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    flex: 1;
+}

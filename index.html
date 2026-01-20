@@ -1,12 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Entrega 1 - Ignacio Ledesma</title>
+    <title>🌴 Palmera Capital </title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1> 🌴 Palmera Capital 🌴 </h1>
+
+    <div class="main-layout">
+        <aside class="sidebar">
+            <div class="brand"><h1>Palmera<span>Capital</span>🌴</h1></div>
+            <div class="user-info">
+                <p id="display-cliente"></p>
+            </div>
+            <div class="portfolio-section">
+                <h2>Tu Cartera</h2>
+                <div id="portfolio-display" class="balance-card">
+                    <p class="empty-msg">Tu cartera está vacía</p>
+                </div>
+            </div>
+            
+        </aside>
+
+        <main class="market-grid" id="market-grid">            
+        </main> 
+    </div>
+
+        <dialog id="modal-login">
+        <div class="modal-content">
+            <h2>Palmera Capital 🌴</h2>
+            <p>Ingresa tu usuario:</p>
+            <input type="text" id="input-usuario" placeholder="Nombre de Usuario">
+            <button class="btn-primary" onclick="iniciarSesion()">Entrar</button>
+        </div>
+    </dialog>
+
+    <dialog id="modal-operacion">
+        <div class="modal-content">
+            <h2 id="modal-titulo">Operación</h2>
+            <p id="modal-detalle">Indica la cantidad de nominales:</p>
+            <input type="number" id="input-cantidad" min="1" placeholder="0">
+            <p id="error-msg" class="error-text"></p> <div class="btn-group">
+                <button class="btn-primary" id="btn-confirmar">Confirmar</button>
+                <button class="btn-secondary" onclick="cerrarModales()">Cancelar</button>                
+            </div>
+        </div>
+    </dialog>
+
     <script src="main.js"></script>
 </body>
 </html>
